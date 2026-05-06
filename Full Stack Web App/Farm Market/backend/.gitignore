@@ -1,0 +1,6 @@
+backend/instance/*.db
+backend/instance/*.sqlite
+backend/instance/*.sqlite3
+backend/__pycache__/
+backend/.pytest_cache/
+backend/.coverage

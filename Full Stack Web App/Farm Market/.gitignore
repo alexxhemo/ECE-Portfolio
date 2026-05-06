@@ -1,0 +1,10 @@
+backend/.venv/
+backend/farmmarket.db
+backend/instance/
+backend/__pycache__/
+backend/app/__pycache__/
+backend/app/routes/__pycache__/
+backend/tests/__pycache__/
+backend/.pytest_cache/
+backend/.coverage
+frontend/node_modules/
