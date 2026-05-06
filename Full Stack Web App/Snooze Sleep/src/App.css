@@ -1,0 +1,89 @@
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+}
+
+.auth-form h2 {
+  margin-bottom: 1.5rem;
+  color: #3538DB;
+  text-align: center;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #3538DB;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.auth-links {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.auth-links a {
+  color: #3538DB;
+  text-decoration: none;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+/* Center all page content */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 85px); /* Account for navbar height */
+  padding: 20px;
+  text-align: center;
+}
+
+/* Journey button styling */
+.journey-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #3538DB, #8E35DB);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(53, 56, 219, 0.3);
+}
+
+.journey-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(53, 56, 219, 0.4);
+  background: linear-gradient(135deg, #2a2cb5, #7c2cc9);
+}

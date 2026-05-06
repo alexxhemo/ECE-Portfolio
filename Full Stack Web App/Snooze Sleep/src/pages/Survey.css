@@ -1,0 +1,208 @@
+/* src/pages/Survey.css */
+.survey-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #100325 32%, #2F3272 100%);
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-bar {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.progress-step {
+  width: 20px;
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+}
+
+.progress-step.active {
+  background: #3538DB;
+}
+
+.question-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #333;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  min-height: auto;
+}
+
+.question-card.welcome,
+.question-card.completion {
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 30px;
+}
+
+.question-card h1 {
+  font-size: 2rem;
+  color: #3538DB;
+  margin-bottom: 10px;
+}
+
+.question-card h2 {
+  font-size: 1.5rem;
+  color: #3538DB;
+  margin-bottom: 8px;
+}
+
+.question-card p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.radio-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.yesno-options {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.radio-button,
+.yesno-button,
+.continue-button,
+.primary-button {
+  padding: 15px 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+}
+
+.radio-button:hover,
+.yesno-button:hover,
+.continue-button:hover:not(.disabled) {
+  border-color: #3538DB;
+  background: #f5f5ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(53, 56, 219, 0.2);
+}
+
+.primary-button {
+  background: #3538DB;
+  color: white;
+  border: none;
+  min-width: 200px;
+  font-weight: 600;
+}
+
+.primary-button:hover {
+  background: #2a2cb5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(53, 56, 219, 0.3);
+}
+
+.number-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.number-input input {
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  width: 120px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333 !important;
+  background-color: white !important;
+  font-weight: 600;
+}
+
+.number-input input:focus {
+  outline: none;
+  border-color: #3538DB;
+  box-shadow: 0 0 0 3px rgba(53, 56, 219, 0.1);
+  color: #333 !important;
+  background-color: white !important;
+}
+
+.number-input input::placeholder {
+  color: #999 !important;
+  font-weight: 400;
+}
+
+/* Disabled button state */
+.continue-button.disabled {
+  background: #f5f5f5;
+  color: #999;
+  border-color: #ddd;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.continue-button.disabled:hover {
+  background: #f5f5f5;
+  color: #999;
+  border-color: #ddd;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Ensure text is visible and properly styled */
+button {
+  font-family: inherit;
+  line-height: 1.4;
+}
+
+/* Override any global button styles that might be interfering */
+.radio-button,
+.yesno-button {
+  color: #333 !important;
+  background-color: white !important;
+}
+
+.radio-button:hover,
+.yesno-button:hover {
+  color: #3538DB !important;
+}
+
+/* Force input text to be visible - override any global styles */
+input[type="number"] {
+  color: #333 !important;
+  background-color: white !important;
+  -webkit-text-fill-color: #333 !important;
+}
+
+input[type="number"]:focus {
+  color: #333 !important;
+  background-color: white !important;
+  -webkit-text-fill-color: #333 !important;
+}

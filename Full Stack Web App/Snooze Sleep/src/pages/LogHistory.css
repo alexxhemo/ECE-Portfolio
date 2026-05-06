@@ -1,0 +1,43 @@
+.log-history {
+    position: sticky;
+    min-height: 100vh;
+    
+}
+
+.log-history select,
+.log-history label,
+.log-history p,
+.log-history h1 {
+    position: relative;
+    z-index: 10;
+    top: 100px; 
+}
+
+.rectangle {
+    top: 150px;
+    position: absolute;
+    flex-shrink: 0;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+.rectangle.blue {
+    transform: rotate(-90deg);
+    background: #3538DB;
+    width: 600px;
+    height: 400px;
+}
+
+.rectangle.magenta {
+    transform: rotate(-96.67deg);
+    background:  #8E35DB;
+    width: 600px;
+    height: 400px;
+}
+
+.rectangle.purple {
+    transform: rotate(101.74deg);
+    background: #530892;
+    width: 600px;
+    height: 400px;
+}

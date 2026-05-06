@@ -1,0 +1,107 @@
+.log-activity {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 12vh;
+  gap: 20px;
+  z-index: 10;
+}
+
+.log-activity select {
+  position: relative;
+  z-index: 10;
+  width: auto;
+  max-width: 200px;
+  background-color: white;
+  color: black;
+}
+
+.log-activity label,
+.log-activity p,
+.log-activity h1 {
+    position: relative;
+    z-index: 10;
+}
+
+.background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.rectangle {
+    position: absolute;
+    top: 150px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+.rectangle.blue {
+    transform: rotate(-90deg);
+    background: #3538DB;
+    width: 600px;
+    height: 400px;
+}
+
+.rectangle.magenta {
+    transform: rotate(-96.67deg);
+    background:  #8E35DB;
+    width: 600px;
+    height: 400px;
+}
+
+.rectangle.purple {
+    transform: rotate(101.74deg);
+    background: #530892;
+    width: 600px;
+    height: 400px;
+}
+
+.react-datepicker__input-container {
+  width: 100%;
+  color: black;
+}
+
+.react-datepicker__input-container input {
+  width: 100%;
+  background-color: white;
+  color: black;
+  border-radius: 100px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.react-datepicker-popper {
+    z-index: 9999 !important;
+}
+
+.button-layout {
+  display: flex;
+  width: 394px;
+  height: 67px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.button-style {
+  border-radius: 200px;
+  border: 6px solid #140B92;
+  background: #B787E0;
+  color: black;
+}
+
+.button-layout:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
