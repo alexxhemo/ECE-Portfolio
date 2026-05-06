@@ -1,0 +1,20 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.VC.db
+*.opendb
+
+# Build outputs
+x64/
+Debug/
+Release/
+build/
+bin/
+obj/
+
+# Logs / temp files
+*.log
+*.tlog
+*.recipe
+imgui.ini
