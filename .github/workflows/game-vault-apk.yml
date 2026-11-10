@@ -13,7 +13,7 @@ jobs:
 
       - name: Reconstruct Android project
         run: |
-          cat .game-vault-build/part00.b64 .game-vault-build/part01.b64 .game-vault-build/part02.b64 .game-vault-build/part03.b64 > gamevault.b64
+          cat .game-vault-build/part00.b64 .game-vault-build/part01.b64 .game-vault-build/part02a.b64 .game-vault-build/part02b.b64 .game-vault-build/part03.b64 > gamevault.b64
           base64 -d gamevault.b64 > gamevault.zip
           unzip -q gamevault.zip
           ls -la GameVaultAndroid
