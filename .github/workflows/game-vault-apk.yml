@@ -18,6 +18,11 @@ jobs:
           unzip -q gamevault.zip
           ls -la GameVaultAndroid
 
+      - name: Apply Game Vault v1.1 fixes
+        run: |
+          base64 -d .game-vault-build/patch_v1_1.py.b64 > patch_v1_1.py
+          python patch_v1_1.py
+
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
