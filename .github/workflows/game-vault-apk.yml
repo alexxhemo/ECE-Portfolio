@@ -1,0 +1,49 @@
+name: Build Game Vault APK
+
+on:
+  push:
+    branches: [ game-vault-apk-build ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Reconstruct Android project
+        run: |
+          cat .game-vault-build/part00.b64 .game-vault-build/part01.b64 .game-vault-build/part02a.b64 .game-vault-build/part02b.b64 .game-vault-build/part03.b64 > gamevault.b64
+          base64 -d gamevault.b64 > gamevault.zip
+          unzip -q gamevault.zip
+          ls -la GameVaultAndroid
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Inspect Android SDK
+        run: |
+          echo "ANDROID_HOME=$ANDROID_HOME"
+          ls -la "$ANDROID_HOME" || true
+          ls -la "$ANDROID_HOME/platforms" || true
+          ls -la "$ANDROID_HOME/build-tools" || true
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+
+      - name: Build APK
+        working-directory: GameVaultAndroid
+        run: gradle assembleDebug
+
+      - name: Rename APK
+        run: cp GameVaultAndroid/app/build/outputs/apk/debug/app-debug.apk GameVault.apk
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: GameVault-APK
+          path: GameVault.apk
